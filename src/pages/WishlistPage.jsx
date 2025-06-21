@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Navbar from "../components/Navbar";
-import Wishlist from "../components/wishlist";
+import Wishlist from "../components/Wishlist";
 import Footer from "../components/Footer";
 
 // Global styles

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import axiosInstance from "../api/axiosInstance"; // Adjust the path based on your folder structure
+
 import {
   TestimonialContainer,
   TestimonialWrapper,
@@ -23,14 +25,10 @@ const Testimonial = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/testimonials");
-        if (!response.ok) {
-          throw new Error("Failed to fetch testimonials.");
-        }
-        const data = await response.json();
-        setTestimonials(data);
+        const response = await axiosInstance.get("/api/testimonials");
+        setTestimonials(response.data);
       } catch (err) {
-        setError(err.message);
+        setError(err.message || "Something went wrong.");
       } finally {
         setLoading(false);
       }
@@ -79,8 +77,7 @@ const Testimonial = () => {
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star
                     key={index}
-                    className={`fa ${index < testimonial.rating ? "fa-star" : "fa-star-o"
-                      }`}
+                    className={`fa ${index < testimonial.rating ? "fa-star" : "fa-star-o"}`}
                   />
                 ))}
               </Rating>

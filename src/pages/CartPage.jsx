@@ -11,6 +11,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from "../api/axiosInstance";
+import { useNavigate } from "react-router-dom";
 
 const TableWrapper = styled.div`
   overflow-x: auto;
@@ -97,13 +98,19 @@ const CartPage = () => {
   const [view, setView] = useState("cart");
   const [trackingVisible, setTrackingVisible] = useState({});
   const userId = sessionStorage.getItem("userId");
+  const navigate = useNavigate();
+
 
   // General fetch helper using axiosInstance
   const fetchData = async (endpoint, updateState) => {
     if (!userId) {
-      setError("User ID not found. Please log in.");
+      toast.error("Please log in to continue...");
+      setTimeout(() => {
+        navigate("/account");
+      }, 2000); // wait 2 seconds before redirecting
       return;
     }
+
     try {
       setLoading(true);
       const { data } = await axiosInstance.get(endpoint);
@@ -280,7 +287,7 @@ const CartPage = () => {
     <div>
       <Navbar />
       <ToastContainer />
-      <div className="small-container cart-page">
+      <div className="small-container cart-page" style={{ marginBottom: "400px" }}>
         <ToggleButtonGroup>
           <ToggleButton active={view === "cart"} onClick={() => setView("cart")}>
             View Cart

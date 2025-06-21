@@ -66,7 +66,7 @@ const Offer = () => {
             <h1>{offer.title}</h1>
             <small>{offer.description}</small>
             <div>
-              <a href={offer.link || "#"} className="btn">
+              <a href={"#"} className="btn">
                 Buy Now &#8594;
               </a>
             </div>
