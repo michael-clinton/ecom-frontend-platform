@@ -185,7 +185,7 @@ const AccountPage = () => {
       <Container>
         <Row>
           <ImageSection>
-            <Image src="images/image1.png" alt="Account" />
+            <Image src="/image1.png" alt="Account" />
           </ImageSection>
           <FormSection>
             <FormContainer>

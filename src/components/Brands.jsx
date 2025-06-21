@@ -5,11 +5,11 @@ const Brands = () => {
     <div className="brands">
       <div className="small-container">
         <div className="row">
-          <div className="col-5"><img src="images/logo-godrej.png" alt="Godrej" /></div>
-          <div className="col-5"><img src="images/logo-oppo.png" alt="Oppo" /></div>
-          <div className="col-5"><img src="images/logo-coca-cola.png" alt="Coca Cola" /></div>
-          <div className="col-5"><img src="images/logo-paypal.png" alt="Paypal" /></div>
-          <div className="col-5"><img src="images/logo-philips.png" alt="HP" /></div>
+          <div className="col-5"><img src="/logo-godrej.png" alt="Godrej" /></div>
+          <div className="col-5"><img src="/logo-oppo.png" alt="Oppo" /></div>
+          <div className="col-5"><img src="/logo-coca-cola.png" alt="Coca Cola" /></div>
+          <div className="col-5"><img src="/logo-paypal.png" alt="Paypal" /></div>
+          <div className="col-5"><img src="/logo-philips.png" alt="HP" /></div>
         </div>
       </div>
     </div>

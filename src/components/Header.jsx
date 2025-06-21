@@ -66,7 +66,7 @@ const Header = () => {
           <div className="navbar">
             <div className="logo">
               <Link to="/">
-                <img src="images/logo.png" width="125px" alt="Logo" />
+                <img src="/logo.png" width="125px" alt="Logo" />
               </Link>
             </div>
 
@@ -171,7 +171,7 @@ const Header = () => {
               </Link>
             </div>
             <div className="col-2">
-              <img src="images/image1.png" alt="Workout" />
+              <img src="/image1.png" alt="Workout" />
             </div>
           </div>
         </div>
