@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://redstore-ecommerce-platform.onrender.com", // Use env variable or fallback to localhost
+  baseURL: "https://ecom-backend-platform.onrender.com", // Use env variable or fallback to localhost
   headers: {
     "Content-Type": "application/json",
   },
