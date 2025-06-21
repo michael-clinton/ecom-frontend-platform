@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.REACT_APP_API_URL || "http://localhost:5000/", // Use env variable or fallback to localhost
+  baseURL: "https://redstore-ecommerce-platform.onrender.com", // Use env variable or fallback to localhost
   headers: {
     "Content-Type": "application/json",
   },
