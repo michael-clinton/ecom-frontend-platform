@@ -39,7 +39,7 @@ const FeaturedCategories = () => {
             <Link to="/products/category/jeans" style={{ textDecoration: "none" }}>
               <Category>
                 <CategoryImage
-                  src="images/category-1.jpg"
+                  src="/category-1.jpg"
                   alt="All Products"
                   style={imageStyle} // Apply uniform styling
                 />
@@ -57,7 +57,7 @@ const FeaturedCategories = () => {
             <Link to="/products/category/shoes" style={{ textDecoration: "none" }}>
               <Category>
                 <CategoryImage
-                  src="images/category-2.jpg"
+                  src="category-2.jpg"
                   alt="Shoes"
                   style={imageStyle} // Apply uniform styling
                 />
@@ -75,7 +75,7 @@ const FeaturedCategories = () => {
             <Link to="/products/category/jackets" style={{ textDecoration: "none" }}>
               <Category>
                 <CategoryImage
-                  src="images/jacket.jpg"
+                  src="jacket.jpg"
                   alt="Jackets"
                   style={imageStyle} // Apply uniform styling
                 />
