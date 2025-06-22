@@ -369,7 +369,7 @@ const FeaturedProduct = () => {
     if (!userId || !token) {
       toast.info("Please register or log in to add items to your cart.");
       setTimeout(() => {
-        navigate("/register"); // Redirect to /register instead of /account
+        navigate("/account"); // Redirect to /register instead of /account
       }, 2000);
       return;
     }
