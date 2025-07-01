@@ -5,19 +5,19 @@ export const SmallContainer = styled.div`
   margin: 40px auto;
   padding: 20px;
   background-color: #fefefe;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 `;
 
 export const Row = styled.div`
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -10px;
 
   &.row-2 {
     justify-content: flex-end;
-    margin-top: 10px;  /* Control spacing between header and row */
+    margin-top: 10px;
   }
 
   select {
@@ -30,6 +30,7 @@ export const Row = styled.div`
     background-color: #f9f9f9;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    margin-bottom: 15px; /* Added spacing after select */
 
     &:focus {
       border-color: #555;
@@ -45,8 +46,8 @@ export const Row = styled.div`
 `;
 
 export const Col = styled.div`
-  flex: 1 1 calc(25% - 20px); /* 4 columns on big screens */
-  margin: 10px;
+  padding: 10px;
+  width: 25%;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -56,8 +57,8 @@ export const Col = styled.div`
   }
 
   img {
-    width: 70%; /* Maintain width for larger screens */
-    height: 350px; /* Fixed height */
+    width: 100%;
+    height: 300px;
     object-fit: cover;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -85,27 +86,29 @@ export const Col = styled.div`
   }
 
   @media (max-width: 1200px) {
-    flex: 1 1 calc(50% - 20px); /* 2 columns on medium screens */
+    width: 33.33%;
   }
 
   @media (max-width: 768px) {
-    flex: 1 1 calc(50% - 20px); /* keep 2 columns on tablets and big phones */
+    width: 50%;
+
     img {
-      width: 90%;
       height: auto;
     }
   }
 
   @media (max-width: 480px) {
-    flex: 1 1 calc(50% - 10px); /* 2 columns on phones */
-    max-width: calc(50% - 10px); /* prevent overflow */
+    width: 50%;
+
     img {
-      width: 100%;
       height: auto;
     }
   }
-`;
 
+  @media (max-width: 360px) {
+    width: 100%;
+  }
+`;
 
 export const PageButton = styled.div`
   text-align: center;
